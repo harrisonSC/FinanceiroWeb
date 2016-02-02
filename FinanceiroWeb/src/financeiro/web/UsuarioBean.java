@@ -61,7 +61,7 @@ public void setParametros(Map<String, String> parametros) {
 }
 
 	public String novo(){
-		return "usuario";
+		return "/jsf/usuario.xhtml";
 		
 	}
 	
@@ -69,11 +69,11 @@ public void setParametros(Map<String, String> parametros) {
 		FacesContext context = FacesContext.getCurrentInstance();
 		if (!this.senha.equalsIgnoreCase(this.confirmaSenha)) {
 			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Senha confirmada incorretamente",""));
-			return "usuario";
+			return "/jsf/usuario.xhtml";
 		}
-		
+		System.out.println("Salvando no DB");
 		// todo salvar o usuario
-		return "sucesso";
+		return "/jsf/mostraUsuario.xhtml";
 		
 	}
 }
