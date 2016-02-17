@@ -19,6 +19,7 @@ public class Usuario implements Serializable {
 	private String celular;
 	private String idioma;
 	private boolean ativo;
+	static final String QUERY_CONSULTA_USERBYLOGIN ="select u from Usuario u where u.login = :login";
 	public Integer getCodigo() {
 		return codigo;
 	}
