@@ -10,6 +10,7 @@
 		<property name="connection.url">jdbc:mysql://localhost/financeiro</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
+		<property name="current_session_context_class">thread</property>
 
 		<!-- Usando as configurações do C3PO para pool de conexões -->
 		<property name="c3po.min_size">5</property>
@@ -17,16 +18,14 @@
 		<property name="c3po.timeout">300</property>
 		<property name="c3po.max_statements">50</property>
 		<property name="c3po.idle_test_period">3000</property>
-		
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- Configurações de debug -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 		<property name="generate_statistics">true</property>
 		<property name="use_sql_comments">true</property>
-		
-		<!-- Mapeando classes 
-		<property name="hbm2ddl.auto">create</property>
-		<mapping resource="com/livro/capitulo3/crudxml/Contato.hbm.xml"/>	-->
-		<mapping class="financeiro.usuario.Usuario"/>
+
+		<!-- Mapeando classes <mapping resource="com/livro/capitulo3/crudxml/Contato.hbm.xml"/> -->
+		<mapping class="financeiro.usuario.Usuario" />
 	</session-factory>
 </hibernate-configuration>
