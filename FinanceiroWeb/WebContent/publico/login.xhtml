@@ -5,22 +5,13 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>Usuários Cadastrado</title>
+	<title>Login</title>
 </h:head>
 <h:body>
-	<h1>Usuários Cadastrado</h1>
-	<hr />
-Nome: <h:outputText value="#{usuarioBean.nome}" />
-	<br />
-e-Mail: <h:outputLink value="mailto:#{usuarioBean.email}">
-		<h:outputText value="#{usuarioBean.email}" />
-	</h:outputLink>	<br />
-Senha: <h:outputText value="#{usuarioBean.senha}" />
-	<br />
-	<hr />
-
+<h1>Login</h1>
 	<h:form>
-		<h:commandLink action="#{usuarioBean.novo}" value="Inicio" />
+		<h:commandLink action="#{usuarioBean.novo}" value="Registre-se"/>
 	</h:form>
 </h:body>
+
 </html>

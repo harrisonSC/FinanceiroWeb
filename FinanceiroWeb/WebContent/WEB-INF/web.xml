@@ -20,9 +20,12 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.jsf</url-pattern>
   </servlet-mapping>
-  <welcome-file-list>
-  <welcome-file>index.xhtml</welcome-file>
-  </welcome-file-list>
+  
+	<welcome-file-list>
+	<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	
   <filter>
   <filter-name>conexaoFilter</filter-name>
   <filter-class>financeiro.web.filter.ConexaoHibernateFilter</filter-class>
